@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="logo.png" alt="Company Logo" />
+    <ul>
+      <li id="homeBtn" class="active">🏠 Home</li>
+      <li id="heartBtn">❤️ Heart</li>
+      <li id="diabetesBtn">💉 Diabetes</li>
+      <li id="asthmaBtn">🌬️ Asthma</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <nav class="top-nav">
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="hospital-name">❤️Healthcare Center</div>
+      <div class="nav-right">
+        <div class="search-container">
+          <input type="text" id="searchBar" placeholder="🔍 Search doctors or patients..." />
+          <button id="clearSearch" title="Clear search">✖️</button>
+        </div>
+        <button id="themeToggle">🌙</button>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="profile-icon" alt="Profile" />
+      </div>
+    </nav>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+      <div class="heartbeat"></div>
+    </div>
+
+    <div id="content" class="content"></div>
+  </div>
+
+  <!-- Doctor Info Modal -->
+  <div class="modal" id="doctorModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <img id="modalDoctorImg" src="" alt="Doctor" />
+      <h2 id="modalDoctorName"></h2>
+      <p id="modalDoctorSpecialty"></p>
+      <p id="modalDoctorContact"></p>
+      <p id="modalDoctorExperience"></p>
+      <p id="modalDoctorDepartment"></p>
+    </div>
+  </div>
+
+  <!-- Patient Info Modal -->
+  <div class="modal" id="patientModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closePatientModal">&times;</span>
+      <h2 id="patientName"></h2>
+      <p id="patientAge"></p>
+      <p id="patientHeight"></p>
+      <p id="patientWeight"></p>
+      <p id="patientAddress"></p>
+      <p id="patientDisease"></p>
+      <p id="patientSymptoms"></p>
+      <p id="patientTreatment"></p>
+      <p id="patientDoctor"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
